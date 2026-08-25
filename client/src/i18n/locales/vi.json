@@ -1,0 +1,33 @@
+{
+  "common": {
+    "appName": "Quản lý Khóa luận",
+    "loading": "Đang tải...",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "submit": "Gửi",
+    "search": "Tìm kiếm",
+    "actions": "Thao tác",
+    "language": "Ngôn ngữ"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "theses": "Danh sách khóa luận",
+    "submit": "Nộp khóa luận",
+    "council": "Hội đồng",
+    "notifications": "Thông báo",
+    "admin": "Quản trị",
+    "teacher": "Giảng viên",
+    "logout": "Đăng xuất"
+  },
+  "auth": {
+    "loginTitle": "Đăng nhập",
+    "username": "Tên đăng nhập",
+    "usernameRequired": "Vui lòng nhập tên đăng nhập",
+    "password": "Mật khẩu",
+    "passwordRequired": "Vui lòng nhập mật khẩu",
+    "loginButton": "Đăng nhập",
+    "loginSuccess": "Đăng nhập thành công",
+    "loginFailed": "Đăng nhập thất bại",
+    "genericError": "Đã có lỗi xảy ra, vui lòng thử lại."
+  }
+}

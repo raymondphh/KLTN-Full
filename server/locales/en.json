@@ -1,0 +1,18 @@
+{
+  "common": {
+    "serverError": "Internal server error.",
+    "unauthorized": "You must be logged in to do this.",
+    "forbidden": "You don't have permission to do this.",
+    "notFound": "Resource not found.",
+    "validationError": "Please check the fields and try again."
+  },
+  "auth": {
+    "missingFields": "Please provide all required fields.",
+    "usernameTaken": "This username is already taken.",
+    "userNotFound": "Account does not exist.",
+    "wrongPassword": "Incorrect password.",
+    "loginSuccess": "Logged in successfully.",
+    "registerSuccess": "Account created successfully.",
+    "invalidToken": "Invalid or expired session, please log in again."
+  }
+}

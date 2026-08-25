@@ -1,0 +1,18 @@
+{
+  "common": {
+    "serverError": "Lỗi hệ thống, vui lòng thử lại sau.",
+    "unauthorized": "Bạn cần đăng nhập để thực hiện thao tác này.",
+    "forbidden": "Bạn không có quyền thực hiện thao tác này.",
+    "notFound": "Không tìm thấy dữ liệu.",
+    "validationError": "Vui lòng kiểm tra lại thông tin đã nhập."
+  },
+  "auth": {
+    "missingFields": "Vui lòng nhập đầy đủ thông tin bắt buộc.",
+    "usernameTaken": "Tên đăng nhập đã tồn tại.",
+    "userNotFound": "Tài khoản không tồn tại.",
+    "wrongPassword": "Mật khẩu không chính xác.",
+    "loginSuccess": "Đăng nhập thành công.",
+    "registerSuccess": "Tạo tài khoản thành công.",
+    "invalidToken": "Phiên đăng nhập không hợp lệ hoặc đã hết hạn, vui lòng đăng nhập lại."
+  }
+}

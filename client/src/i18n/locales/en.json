@@ -1,0 +1,33 @@
+{
+  "common": {
+    "appName": "Thesis Management",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "search": "Search",
+    "actions": "Actions",
+    "language": "Language"
+  },
+  "nav": {
+    "home": "Home",
+    "theses": "Theses",
+    "submit": "Submit thesis",
+    "council": "Council",
+    "notifications": "Notifications",
+    "admin": "Admin",
+    "teacher": "Teacher",
+    "logout": "Log out"
+  },
+  "auth": {
+    "loginTitle": "Sign in",
+    "username": "Username",
+    "usernameRequired": "Please enter your username",
+    "password": "Password",
+    "passwordRequired": "Please enter your password",
+    "loginButton": "Sign in",
+    "loginSuccess": "Logged in successfully",
+    "loginFailed": "Sign in failed",
+    "genericError": "Something went wrong, please try again."
+  }
+}

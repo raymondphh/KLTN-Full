@@ -1,65 +1,102 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { SERVER_URL } from '../constans'
-import './CSS/Login.css'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Form, Input, Button, Card, Alert, Typography } from "antd";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
+import { toast } from "react-toastify";
+import axiosClient from "../api/axiosClient";
+import LanguageSwitcher from "../components/LanguageSwitcher/LanguageSwitcher";
+
+const { Title } = Typography;
 
 const Login = () => {
-  const navigate = useNavigate()
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [errorMsg, setErrorMsg] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = async (e) => {
-    e.preventDefault()
+  const handleFinish = async (values) => {
+    setErrorMsg("");
+    setLoading(true);
     try {
-      const response = await fetch(`${SERVER_URL}/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      })
+      const { data } = await axiosClient.post("/auth/login", values);
+      const { token, user } = data.data;
 
-      const data = await response.json()
+      localStorage.setItem("token", token);
+      localStorage.setItem("role", user.role);
+      localStorage.setItem("code", user.code);
+      localStorage.setItem("fullname", `${user.firstName} ${user.lastName}`);
 
-      if (response.ok) {
-        localStorage.setItem('token', data.token)
-        localStorage.setItem('role', data.user.role)
-        localStorage.setItem('code', data.user.code)
-        localStorage.setItem('fullname', data.user.firstName + ' ' + data.user.lastName)
-        navigate('/')
-      } else {
-        setError(data.msg || 'Đăng nhập không thành công')
-      }
+      toast.success(data.message || t("auth.loginSuccess"));
+      navigate("/");
     } catch (error) {
-      console.error('Đã xảy ra lỗi khi gọi API:', error)
-      setError('Đã xảy ra lỗi khi đăng nhập')
+      const message = error.response?.data?.message || t("auth.genericError");
+      setErrorMsg(message);
+    } finally {
+      setLoading(false);
     }
-  }
+  };
 
   return (
-    <>
-      <div className='center container-lg'>
-        <div className='login-container'>
-          <h2 className='login-title'>Đăng nhập</h2>
-          <form onSubmit={handleLogin} className='form'>
-            <div className='form-group'>
-              <label>Tên đăng nhập:</label>
-              <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} required />
-            </div>
-            <div className='form-group'>
-              <label>Mật khẩu:</label>
-              <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-            </div>
-            {error && <p className='error-message'>{error}</p>}
-            <div className='form-button'>
-              <button type='submit'>Đăng nhập</button>
-            </div>
-          </form>
-        </div>
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
+      <div className="absolute top-4 right-4">
+        <LanguageSwitcher />
       </div>
-    </>
-  )
-}
 
-export default Login
+      <Card
+        className="w-full max-w-sm shadow-lg rounded-2xl"
+        bodyStyle={{ padding: 32 }}>
+        <div className="text-center mb-6">
+          <Title level={3} className="!mb-1">
+            {t("auth.loginTitle")}
+          </Title>
+          <p className="text-slate-500 text-sm">{t("common.appName")}</p>
+        </div>
+
+        {errorMsg && (
+          <Alert type="error" message={errorMsg} className="mb-4" showIcon />
+        )}
+
+        <Form
+          layout="vertical"
+          onFinish={handleFinish}
+          autoComplete="off"
+          requiredMark={false}>
+          <Form.Item
+            name="username"
+            label={t("auth.username")}
+            rules={[{ required: true, message: t("auth.usernameRequired") }]}>
+            <Input
+              prefix={<UserOutlined className="text-slate-400" />}
+              size="large"
+              autoFocus
+            />
+          </Form.Item>
+
+          <Form.Item
+            name="password"
+            label={t("auth.password")}
+            rules={[{ required: true, message: t("auth.passwordRequired") }]}>
+            <Input.Password
+              prefix={<LockOutlined className="text-slate-400" />}
+              size="large"
+            />
+          </Form.Item>
+
+          <Form.Item className="!mb-0">
+            <Button
+              type="primary"
+              htmlType="submit"
+              size="large"
+              block
+              loading={loading}>
+              {t("auth.loginButton")}
+            </Button>
+          </Form.Item>
+        </Form>
+      </Card>
+    </div>
+  );
+};
+
+export default Login;
