@@ -14,5 +14,18 @@
     "loginSuccess": "Logged in successfully.",
     "registerSuccess": "Account created successfully.",
     "invalidToken": "Invalid or expired session, please log in again."
+  },
+  "thesis": {
+    "notFound": "Thesis not found.",
+    "created": "Thesis created successfully.",
+    "updated": "Thesis updated successfully.",
+    "deleted": "Thesis deleted successfully.",
+    "registered": "Registered for the thesis successfully.",
+    "unregistered": "Unregistered from the thesis successfully.",
+    "memberRemoved": "Member removed successfully.",
+    "alreadyFull": "This thesis has reached its student quota."
+  },
+  "deadline": {
+    "notActive": "Registration period is closed or has not started yet."
   }
 }

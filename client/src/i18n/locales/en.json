@@ -29,5 +29,44 @@
     "loginSuccess": "Logged in successfully",
     "loginFailed": "Sign in failed",
     "genericError": "Something went wrong, please try again."
+  },
+  "thesis": {
+    "title": "Thesis List",
+    "searchPlaceholder": "Search by instructor name...",
+    "addNew": "Add new",
+    "deadline": "Registration deadline",
+    "columns": {
+      "no": "No.",
+      "semester": "Semester",
+      "year": "Year",
+      "instructor": "Instructor",
+      "instructorCode": "Instructor code",
+      "instructorPhone": "Phone",
+      "thesisName": "Thesis name",
+      "quantity": "Slots",
+      "requirement": "Requirement",
+      "actions": "Actions"
+    },
+    "register": "Register",
+    "unregister": "Unregister",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirmTitle": "Delete this thesis?",
+    "deleteConfirmDesc": "This cannot be undone.",
+    "noData": "No theses found.",
+    "formAddTitle": "Add thesis",
+    "formEditTitle": "Edit thesis",
+    "form": {
+      "semester": "Semester",
+      "semesterRequired": "Please enter the semester",
+      "year": "Academic year",
+      "yearRequired": "Please enter the academic year",
+      "thesisName": "Thesis name",
+      "thesisNameRequired": "Please enter the thesis name",
+      "quantity": "Number of students",
+      "quantityRequired": "Please enter the number of students",
+      "requirement": "Requirement"
+    },
+    "registerFailed": "Registration period is closed or has not started yet"
   }
 }

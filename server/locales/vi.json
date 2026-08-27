@@ -14,5 +14,18 @@
     "loginSuccess": "Đăng nhập thành công.",
     "registerSuccess": "Tạo tài khoản thành công.",
     "invalidToken": "Phiên đăng nhập không hợp lệ hoặc đã hết hạn, vui lòng đăng nhập lại."
+  },
+  "thesis": {
+    "notFound": "Không tìm thấy đề tài.",
+    "created": "Tạo đề tài thành công.",
+    "updated": "Cập nhật đề tài thành công.",
+    "deleted": "Xóa đề tài thành công.",
+    "registered": "Đăng ký đề tài thành công.",
+    "unregistered": "Hủy đăng ký đề tài thành công.",
+    "memberRemoved": "Xóa thành viên thành công.",
+    "alreadyFull": "Đề tài này đã đủ số lượng sinh viên."
+  },
+  "deadline": {
+    "notActive": "Thời hạn đăng ký đã hết hoặc chưa bắt đầu."
   }
 }

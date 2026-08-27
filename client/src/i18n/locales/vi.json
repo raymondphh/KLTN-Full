@@ -29,5 +29,44 @@
     "loginSuccess": "Đăng nhập thành công",
     "loginFailed": "Đăng nhập thất bại",
     "genericError": "Đã có lỗi xảy ra, vui lòng thử lại."
+  },
+  "thesis": {
+    "title": "Danh sách đề tài",
+    "searchPlaceholder": "Tìm theo tên giảng viên...",
+    "addNew": "Thêm mới",
+    "deadline": "Hạn đăng ký",
+    "columns": {
+      "no": "STT",
+      "semester": "Kỳ",
+      "year": "Năm",
+      "instructor": "GVHD",
+      "instructorCode": "Mã GV",
+      "instructorPhone": "SĐT GV",
+      "thesisName": "Tên đề tài",
+      "quantity": "Số lượng",
+      "requirement": "Yêu cầu",
+      "actions": "Thao tác"
+    },
+    "register": "Đăng ký",
+    "unregister": "Hủy",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "deleteConfirmTitle": "Xóa đề tài này?",
+    "deleteConfirmDesc": "Hành động này không thể hoàn tác.",
+    "noData": "Không có đề tài nào.",
+    "formAddTitle": "Thêm đề tài",
+    "formEditTitle": "Sửa đề tài",
+    "form": {
+      "semester": "Học kỳ",
+      "semesterRequired": "Vui lòng nhập học kỳ",
+      "year": "Năm học",
+      "yearRequired": "Vui lòng nhập năm học",
+      "thesisName": "Tên đề tài",
+      "thesisNameRequired": "Vui lòng nhập tên đề tài",
+      "quantity": "Số lượng sinh viên",
+      "quantityRequired": "Vui lòng nhập số lượng sinh viên",
+      "requirement": "Yêu cầu"
+    },
+    "registerFailed": "Thời hạn đăng ký đã hết hoặc chưa bắt đầu"
   }
 }
